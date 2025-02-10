@@ -5,7 +5,6 @@ const nextConfig = {
             'utfs.io'
         ]
     },
-    output: "standalone"
 };
 
 export default nextConfig;
