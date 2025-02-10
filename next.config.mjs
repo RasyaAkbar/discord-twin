@@ -4,7 +4,8 @@ const nextConfig = {
         domains: [
             'utfs.io'
         ]
-    }
+    },
+    output: "standalone"
 };
 
 export default nextConfig;
