@@ -4,7 +4,8 @@ import { MemberRole } from "@prisma/client"
 import { NextResponse } from "next/server"
 
 export async function POST(
-    req: Request
+    req: Request,
+    { params }: { params: { channelId: string } }
 ){
     try {
         const profile = await currentProfile()
