@@ -3,7 +3,7 @@ import { db } from "@/lib/db"
 import { MemberRole } from "@prisma/client"
 import { NextResponse } from "next/server"
 
-export async function POST(
+export async function generateStaticParams(
     req: Request
 ){
     try {
