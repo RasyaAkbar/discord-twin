@@ -2,6 +2,9 @@ import { currentProfile } from "@/lib/current-profile"
 import { db } from "@/lib/db"
 import { DirectMessage, Message } from "@prisma/client"
 import { NextResponse } from "next/server"
+import { headers } from 'next/headers';
+
+export const dynamic = 'force-dynamic';
 
 const MESSAGES_BATCH = 10
 
@@ -9,6 +12,7 @@ export async function GET(
     req: Request
 ){
     try {
+        const headersList = await headers();
         const profile = await currentProfile()
         const { searchParams } = new URL(req.url)
 
